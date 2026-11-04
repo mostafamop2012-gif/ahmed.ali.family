@@ -1,0 +1,449 @@
+/* ========================================================
+   1. الإعدادات العامة والخلفية السيبرانية الداكنة
+   ======================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #060b13; /* خلفية داكنة جداً تبرز النيون والمستقبل */
+    background-image: radial-gradient(circle at 50% 50%, #0d1b2a 0%, #050a12 100%);
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* هيدر مستقبلي بتأثير نيون مذهل (Cyber Header) */
+header {
+    background: rgba(13, 27, 42, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 2px solid #00f2ff;
+    padding: 35px 0;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+    position: relative;
+}
+
+/* خط ليزر متحرك أسفل الهيدر */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f2ff, #25d366, transparent);
+    animation: scanLine 4s linear infinite;
+}
+
+@keyframes scanLine {
+    0% { background-position: -200px 0; }
+    100% { background-position: 2000px 0; }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: #00f2ff;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+}
+
+header h1 i {
+    margin-left: 12px;
+    animation: pulseIcon 2s infinite ease-in-out;
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 8px #00f2ff); }
+}
+
+header p {
+    margin: 10px 0 20px 0;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #00f2ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(0, 242, 255, 0.05);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    transform: translateY(-3px);
+    background: #00f2ff;
+    color: #060b13;
+    box-shadow: 0 0 20px #00f2ff;
+}
+
+/* ========================================================
+   2. الحاوية والبطاقات زجاجية الأبعاد النيونية (3D Cyber Cards)
+   ======================================================== */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    background: rgba(13, 27, 42, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 242, 255, 0.15);
+    margin-bottom: 35px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-right: 4px solid #00f2ff;
+}
+
+section h2 {
+    color: #00f2ff;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+    margin-top: 0;
+}
+
+/* توزيع الشبكة بشكل هندسي متساوي تماماً */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* تصميم الكارت المجسم 3D المستقبلي */
+.member-card {
+    background: rgba(21, 32, 54, 0.7);
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير الارتفاع والانبثاق المضيء عند مرور الماوس فوق الكارت */
+.member-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 242, 255, 0.25);
+    background: rgba(27, 42, 71, 0.9);
+    border-color: #00f2ff;
+}
+
+/* الحاوية المجسمة المضيئة للأيقونة المستقبلية */
+.member-icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    background: rgba(6, 11, 19, 0.6);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+}
+
+.member-avatar-icon {
+    font-size: 2.2rem;
+    color: #00f2ff;
+    filter: drop-shadow(0 0 5px #00f2ff);
+}
+
+.member-card h3 {
+    margin: 10px 0 5px 0;
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+.member-phone {
+    font-size: 0.95rem;
+    color: #00f2ff;
+    background: rgba(0, 242, 255, 0.08);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.member-phone i {
+    margin-left: 5px;
+}
+
+/* ========================================================
+   3. أزرار التواصل الدائرية ثلاثية الأبعاد بملء الألوان الأصلية الرسمية
+   ======================================================== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* زر فيسبوك الدائري النيوني الأصلي */
+.facebook {
+    background: #1877f2;
+    border: 1px solid #166fe5;
+}
+.facebook:hover {
+    background: #145dbf;
+    transform: rotate(360deg) scale(1.15); /* دوران 360 درجة مذهل */
+    box-shadow: 0 0 20px #1877f2;
+}
+
+/* زر واتساب الدائري النيوني الأصلي */
+.whatsapp {
+    background: #25d366;
+    border: 1px solid #20ba5a;
+}
+.whatsapp:hover {
+    background: #1ebd58;
+    transform: rotate(360deg) scale(1.15);
+    box-shadow: 0 0 20px #25d366;
+}
+
+/* ========================================================
+   4. تأثير الوميض الرقمي (Cyber Glitch Effect)
+   ======================================================== */
+.cyber-glitch-title {
+    position: relative;
+    display: inline-block;
+}
+
+.cyber-glitch-title::before,
+.cyber-glitch-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: none;
+}
+
+.cyber-glitch-title:hover::before {
+    display: block;
+    left: 2px;
+    text-shadow: -2px 0 #ff0055;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 0.4s infinite linear alternate-reverse;
+}
+
+.cyber-glitch-title:hover::after {
+    display: block;
+    left: -2px;
+    text-shadow: -2px 0 #00f2ff;
+    clip: rect(85px, 450px, 140px, 0);
+    animation: glitch-anim2 0.4s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    20% { clip: rect(76px, 9999px, 11px, 0); }
+    40% { clip: rect(25px, 9999px, 61px, 0); }
+    100% { clip: rect(88px, 9999px, 98px, 0); }
+}
+
+@keyframes glitch-anim2 {
+    0% { clip: rect(76px, 9999px, 11px, 0); }
+    40% { clip: rect(54px, 9999px, 33px, 0); }
+    100% { clip: rect(34px, 9999px, 55px, 0); }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #050a12;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 242, 255, 0.2);
+}
+/* ========================================================
+   5. قسم تخليد الذكرى ولوحة الأدعية وسورة الفاتحة 3D
+   ======================================================== */
+.memorial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+/* بطاقة سورة الفاتحة الزجاجية المتوهجة */
+.fatiha-card {
+    background: rgba(13, 27, 42, 0.85);
+    border: 1px solid #ecc94b; /* إطار ذهبي تعبيراً عن جلال الآيات */
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(236, 201, 75, 0.15);
+}
+
+.fatiha-header {
+    font-size: 1.4rem;
+    color: #ecc94b;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(236, 201, 75, 0.4);
+}
+
+.fatiha-header i {
+    margin-left: 8px;
+}
+
+.fatiha-text {
+    font-size: 1.25rem;
+    color: #ffffff;
+    line-height: 2.2;
+    text-shadow: 0 0 5px rgba(255,255,255,0.1);
+}
+
+/* بطاقة لوحة استقبال الأدعية */
+.prayer-wall-card {
+    background: rgba(21, 32, 54, 0.7);
+    border: 1px solid rgba(0, 242, 255, 0.15);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.prayer-wall-card h3 {
+    color: #00f2ff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.prayer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* تنسيق مدخلات البيانات المستقبلية */
+.prayer-form input, .prayer-form textarea {
+    background: rgba(6, 11, 19, 0.8);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.prayer-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.prayer-form input:focus, .prayer-form textarea:focus {
+    outline: none;
+    border-color: #00f2ff;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+/* زر إرسال سيبراني تفاعلي */
+.cyber-btn {
+    background: transparent;
+    border: 1px solid #00f2ff;
+    padding: 12px;
+    color: #00f2ff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cyber-btn:hover {
+    background: #00f2ff;
+    color: #060b13;
+    box-shadow: 0 0 20px #00f2ff;
+}
+
+/* بث الرسائل المباشر */
+.prayers-stream-header {
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.prayers-list-stream {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto; /* إضافة شريط تمرير للأدعية الكثيرة */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 5px;
+}
+
+.prayer-msg-box {
+    background: rgba(6, 11, 19, 0.5);
+    border-left: 3px solid #25d366;
+    padding: 15px;
+    border-radius: 6px;
+    animation: fadeInMsg 0.5s ease-out forwards;
+}
+
+.msg-sender {
+    color: #25d366;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.msg-text {
+    margin: 0;
+    color: #cbd5e0;
+    font-size: 0.95rem;
+}
+
+@keyframes fadeInMsg {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* تنسيق رابط الاتصال المباشر */
+.member-phone-link {
+    text-decoration: none; /* إزالة الخط الافتراضي أسفل الرابط */
+    display: inline-block;
+}
+
+/* تأثير خفيف وتغيير طفيف للون عند الوقوف على الرقم لإعلام المستخدم أنه قابل للضغط */
+.member-phone-link:hover .member-phone {
+    background: rgba(0, 242, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+    border-color: #00f2ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
